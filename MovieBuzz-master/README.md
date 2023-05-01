@@ -10,7 +10,7 @@ A content based movie recommendation website. Based on the user search, it recom
 
 [View the live app]()
 
-# Baackend API provided by-
+# Backend API provided by-
 
 The Movie Database(TMDB) 'www.http://themoviedb.org/apikey'.
 
