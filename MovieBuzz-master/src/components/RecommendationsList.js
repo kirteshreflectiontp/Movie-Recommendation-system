@@ -10,7 +10,7 @@ import {
   Typography,
 } from '@mui/material';
 
-const TMDB_KEY ='9b69154e469641b26369b57d3e3fb1f5';
+const TMDB_KEY = '9b69154e469641b26369b57d3e3fb1f5';
 const POSTER_ROOT = '	https://image.tmdb.org/t/p/original/';
 
 class RecList extends Component {
@@ -35,18 +35,16 @@ class RecList extends Component {
     for (const jsKey in js) {
       if (js[jsKey].length !== 0) {
         if (jsKey === 'movie_results') {
-          // release_date = js[jsKey][0]["release_date"]
+
           title = js[jsKey][0].title;
         } else if (jsKey === 'tv_results') {
-          // release_date = js[jsKey][0]["first_air_date"]
+
           title = js[jsKey][0].name;
         }
-        // overview = js[jsKey][0]["overview"]
+
         rating = js[jsKey][0].vote_average;
         poster_path = js[jsKey][0].poster_path;
-        // if (js[jsKey][0]["backdrop_path"] !== null) {
-        //   backdrop_path = js[jsKey][0]["backdrop_path"]
-        // }
+
       }
     }
     data = [title, rating, poster_path];
@@ -74,7 +72,7 @@ class RecList extends Component {
                 width: '100%',
               }}
             >
-              {/* POSTER_ROOT + arr[2] */}
+
               <CardMedia
                 image={POSTER_ROOT + arr[2]}
                 title={arr[0]}
@@ -89,7 +87,7 @@ class RecList extends Component {
                 <Typography variant="h6" component="h2">
                   {arr[0]}
                 </Typography>
-                {/* <Typography>{post.excerpt}</Typography> */}
+
               </CardContent>
             </Card>
           </CardActionArea>

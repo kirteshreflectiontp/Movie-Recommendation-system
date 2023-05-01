@@ -53,69 +53,69 @@ class SelectedMovie extends Component {
     const { arr } = this.state;
     console.log(arr);
     return (
-        arr ? (
+      arr ? (
+        <div
+          className="smovie-main"
+          style={{
+            width: 'inherit',
+            backgroundImage: `url(${POSTER_ROOT}${arr[5]})`,
+            borderRadius: '10px',
+          }}
+        >
           <div
-            className="smovie-main"
             style={{
-              width: 'inherit',
-              backgroundImage: `url(${POSTER_ROOT}${arr[5]})`,
+              backgroundImage:
+                'linear-gradient(to right, rgba(0, 0, 0, 0.90) 150px, rgba(0, 0, 0, 0.60) 100%)',
               borderRadius: '10px',
             }}
           >
-            <div
-              style={{
-                backgroundImage:
-                  'linear-gradient(to right, rgba(0, 0, 0, 0.90) 150px, rgba(0, 0, 0, 0.60) 100%)',
-                borderRadius: '10px',
-              }}
-            >
-              <Grid container spacing={6} className="smovie-grid">
-                <Grid item lg={4} xs={12} style={{ textAlign: 'right' }}>
-                  <img
-                    src={POSTER_ROOT + arr[4]}
-                    alt="poster"
-                    width="75%"
-                    style={{
-                      boxShadow: '10px 10px 40px rgba(100,100,100,0.20)',
-                      borderRadius: '2px',
-                    }}
-                  />
-                </Grid>
-                <Grid item lg={8} xs={12} style={{ paddingRight: '5rem' }}>
-                  <Typography component="h1" variant="h3">
-                    {arr[0]}
-                  </Typography>
-                  <Rating defaultValue={(arr[1] * 1.0) / 2} precision={0.5} />
-                  <Typography
-                    component="h1"
-                    variant="h5"
-                    style={{ paddingTop: 0 }}
-                  >
-                    <br />
-                    {' '}
-                    Overview
-                  </Typography>
-                  <Typography
-                    component="h6"
-                    variant="body1"
-                    style={{ paddingBottom: '2rem' }}
-                  >
-                    {arr[2]}
-                  </Typography>
-                  <Typography component="tspan" variant="body1">
-                    Release Date:
-                    {' '}
-                    {arr[3]}
-                  </Typography>
-                </Grid>
+            <Grid container spacing={6} className="smovie-grid">
+              <Grid item lg={4} xs={12} style={{ textAlign: 'right' }}>
+                <img
+                  src={POSTER_ROOT + arr[4]}
+                  alt="poster"
+                  width="75%"
+                  style={{
+                    boxShadow: '10px 10px 40px rgba(100,100,100,0.20)',
+                    borderRadius: '2px',
+                  }}
+                />
               </Grid>
-            </div>
+              <Grid item lg={8} xs={12} style={{ paddingRight: '5rem' }}>
+                <Typography component="h1" variant="h3">
+                  {arr[0]}
+                </Typography>
+                <Rating defaultValue={(arr[1] * 1.0) / 2} precision={0.5} />
+                <Typography
+                  component="h1"
+                  variant="h5"
+                  style={{ paddingTop: 0 }}
+                >
+                  <br />
+                  {' '}
+                  Overview
+                </Typography>
+                <Typography
+                  component="h6"
+                  variant="body1"
+                  style={{ paddingBottom: '2rem' }}
+                >
+                  {arr[2]}
+                </Typography>
+                <Typography component="tspan" variant="body1">
+                  Release Date:
+                  {' '}
+                  {arr[3]}
+                </Typography>
+              </Grid>
+            </Grid>
           </div>
-        ) : (
-          <div align="center">
-            <CircularProgress />
-          </div>
-        )
+        </div>
+      ) : (
+        <div align="center">
+          <CircularProgress />
+        </div>
+      )
     )
   }
 }

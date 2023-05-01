@@ -27,18 +27,16 @@ class MovieList extends Component {
     for (const jsKey in js) {
       if (js[jsKey].length !== 0) {
         if (jsKey === 'movie_results') {
-          // release_date = js[jsKey][0]["release_date"]
+
           title = js[jsKey][0].title;
         } else if (jsKey === 'tv_results') {
-          // release_date = js[jsKey][0]["first_air_date"]
+
           title = js[jsKey][0].name;
         }
-        // overview = js[jsKey][0]["overview"]
+
         rating = js[jsKey][0].vote_average;
         poster_path = js[jsKey][0].poster_path;
-        // if (js[jsKey][0]["backdrop_path"] !== null) {
-        //   backdrop_path = js[jsKey][0]["backdrop_path"]
-        // }
+
       }
     }
     data = [title, rating, poster_path];
