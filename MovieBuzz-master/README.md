@@ -27,7 +27,7 @@ You will get API keys in API Keys section.
 
 # System Requirements
 
-Windows/Mac/Linux
+Windows/Mac/Linux,
 Min 4 gb Ram
 
 # Needed Softwares on system
@@ -40,18 +40,18 @@ Nodejs (https://nodejs.org/Download)
 
 # React Dependencies
 
-Node Modules
-React-Router-Dom
-Material Ui
+Node Modules,
+React-Router-Dom,
+Material Ui,
 Axios
 
 # How to Install Dependencies
 
-npm install
+$ npm install
 
 # How to Start The Project
 
-npm start
+$ npm start
  
 # Hurray!! Enjoy The App #
 
