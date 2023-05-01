@@ -27,7 +27,7 @@ else{
     <div>
  <div className='body_b'>
                 <div className="head">
-                    <div className='logo'>LoGo</div>
+                    <div className='logo'>Movie BUZZ</div>
 
                     <div><button className='signup_button'><Link to= './Signup'>SIGN UP</Link></button></div>
                 </div>

@@ -1,11 +1,9 @@
-import React, { useContext, useState } from 'react'
-import UserContext from './UserContext';
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
-const Registerform = (props) => {
-    const{loggedInUser} = useContext(UserContext);
-    const [email,setEmail] = useState(props.page === 'edit' ? loggedInUser?.email : '');
-    const [username,setUserName] = useState(props.page === 'edit' ? loggedInUser?.username :'');
-    const [password,setPassword] = useState(props.page === 'edit' ? loggedInUser?.password :'');
+const Registerform = () => {
+    const [email,setEmail] = useState('');
+    const [username,setUserName] = useState('');
+    const [password,setPassword] = useState('');
     const [errormessage,setErrorMessage] = useState();
     const [userCheck,setUserCheck] = useState(false);
     const [suggestion,setSuggestion] = useState(false);
@@ -42,34 +40,19 @@ else{
     window.location.href = '/';
 }    
 }
-    const UpdateProfile = (userList,users) => {
-        const filteredUserList = userList.filter((user) => {
-            const userObject = JSON.parse(user);
-            if(userObject.username !== loggedInUser.username){
-                return (user);
-            }
-        })
-        filteredUserList.push(JSON.stringify(users));
-        localStorage.setItem('userList',JSON.stringify(filteredUserList));
-        setErrorMessage('')
-        window.location.href = './Home';
-    }
     const SaveProfile = () => {
         if(validateUser()){
           const users = {
             email: email,
             username: username,
-            password:props.page === 'edit' ? loggedInUser.password : password
+            password: password
           }
           console.log('users',users);
           let userList = localStorage.getItem('userList') ? JSON.parse(localStorage.getItem('userList')) : [];
-        if(props.page === 'edit'){
-            UpdateProfile(userList,users)
-        }
-        else{
+      
             Register(userList,users)
         }
-        }
+
         else{
           setErrorMessage('Please Fill All Data Inputs')
         }
@@ -77,22 +60,18 @@ else{
   return (
     <div className='body_b'>
          <div className="head">
-                    <div className='logo'>LoGo</div>
+                    <div className='logo'>Movie BUZZ</div>
 
                     <div><button className='signup_button'><Link to= '/'>SIGN IN</Link></button></div>
                 </div>
- {props.page !== 'edit' ?
+
          <div className="main">
                             <div className='login_head'>Sign Up</div>
                             <div>Wellcome! Please Enter Your Details</div>
                             <div className='error_message'>{errormessage}</div>
                            {userCheck && <div className='error_message'>{userCheck} Username is Allready Exist <b className='try'>Try:{suggestion}</b>  </div>}
                         </div>
-                        :
-                        <div className="main">
-                        <div className='login_head'>Edit Information</div>
-                    </div>
-}
+                       
          <div>
          <br />
                         <br />
@@ -104,17 +83,21 @@ else{
                             <div className='input-data'>
                                 <input  name='username' value={username} onChange={(event) => setUserName(event.target.value)} type="text" placeholder="User Name" />
                             </div>
-                            {props.page === 'edit' ? <></> :
+                           
                             <div className='input-data'>
                                 <input onChange={(event) => setPassword(event.target.value)} type="password" placeholder="Password" />
                             </div>
-                            }
+                            
                             <br />
                             <br />
                             <br />
                             <div className='input-data'>
-                            <button className='login_button' onClick={SaveProfile}>{props.page === 'edit' ? <>Save</> : <>Sign Up</>}</button>
+                            <button className='login_button' onClick={SaveProfile}>Sign Up</button>
                             </div>
+                            <div className="foot">
+                    <div>All copyright &copy; reserved Library of Life</div>
+                    <div><span className='termscondition'>Terms & Conditions</span><span>Privacy Policy</span> </div>
+                </div>
              </div>
                     
     </div>
