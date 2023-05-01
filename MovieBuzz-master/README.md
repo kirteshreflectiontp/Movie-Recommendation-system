@@ -14,11 +14,27 @@ A content based movie recommendation website. Based on the user search, it recom
 
 The Movie Database(TMDB) 'www.http://themoviedb.org/apikey'.
 
-# Needed Software on system
+# How to get TMDB API keys-
+
+Go to 'www.http://themoviedb.org'.
+Signup >> Gmail Verfication >> Login
+Go to Setting >>API keys >> Apply For Api Keys
+If they ask project link just type 'NA'.
+You will get API keys in API Keys section.
+ Copy API keys and paste in TBMB_Keys variable's strings given in 
+ Movielist.js,Recommendations.js and SelectedMovie.js
+ Done : Your database Is connected your app.
+
+# System Requirements
+
+Windows/Mac/Linux
+Min 4 gb Ram
+
+# Needed Softwares on system
 
 Nodejs (https://nodejs.org/Download)
 
-# Needed Software on system
+# Needed Tools on system
 
  VS code (https://code.visualstudio.com/Download)
 
@@ -37,6 +53,7 @@ npm install
 
 npm start
  
+# Hurray!! Enjoy The App #
 
 
 
