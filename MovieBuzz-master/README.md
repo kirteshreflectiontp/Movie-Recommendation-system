@@ -45,6 +45,15 @@ React-Router-Dom
 Material Ui
 Axios
 
+# Functionalities
+
+SignUp
+SignIn
+Movie Search
+Recommendations
+Ratings
+Logout
+
 # How to Install Dependencies
 
 npm install

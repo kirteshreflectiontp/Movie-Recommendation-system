@@ -24,12 +24,12 @@ const Login = (props) => {
     }
   }
   return (
-    <div>
+    <div className='body_main'>
       <div className='body_b'>
         <div className="head">
           <div className='logo'>Movie BUZZ</div>
 
-          <div><button className='signup_button'><Link to='./Signup'>SIGN UP</Link></button></div>
+          <div><Link to='./Signup'><button className='bn30'>SIGN UP</button></Link></div>
         </div>
 
         <div>
@@ -54,7 +54,7 @@ const Login = (props) => {
             <br />
             <br />
             <div className='input-data'>
-              <button className='login_button' onClick={login}>LOGIN</button>
+              <button className='bn29' onClick={login}>LOGIN</button>
             </div>
           </div>
         </div>

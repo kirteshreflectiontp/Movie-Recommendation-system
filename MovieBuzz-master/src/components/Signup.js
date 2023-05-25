@@ -58,48 +58,49 @@ const Registerform = () => {
     }
   }
   return (
-    <div className='body_b'>
-      <div className="head">
-        <div className='logo'>Movie BUZZ</div>
+    <div className='body_main'>
+      <div className='body_b'>
+        <div className="head">
+          <div className='logo'>Movie BUZZ</div>
+          <div><Link to='/'><button className='bn30'>SIGN IN</button></Link></div>
+        </div>
 
-        <div><button className='signup_button'><Link to='/'>SIGN IN</Link></button></div>
+        <div className="main">
+          <div className='login_head'>Sign Up</div>
+          <div>Wellcome! Please Enter Your Details</div>
+          <div className='error_message'>{errormessage}</div>
+          {userCheck && <div className='error_message'>{userCheck} Username is Allready Exist <b className='try'>Try:{suggestion}</b>  </div>}
+        </div>
+
+        <div>
+          <br />
+          <br />
+          <br />
+          <div className='input-data'>
+            <input name='email' value={email} onChange={(event) => setEmail(event.target.value)} type="text" placeholder="Email Address" />
+          </div>
+
+          <div className='input-data'>
+            <input name='username' value={username} onChange={(event) => setUserName(event.target.value)} type="text" placeholder="User Name" />
+          </div>
+
+          <div className='input-data'>
+            <input onChange={(event) => setPassword(event.target.value)} type="password" placeholder="Password" />
+          </div>
+
+          <br />
+          <br />
+          <br />
+          <div className='input-data'>
+            <button className='bn29' onClick={SaveProfile}>Sign Up</button>
+          </div>
+          <div className="foot">
+            <div>All copyright &copy; reserved Library of Life</div>
+            <div><span className='termscondition'>Terms & Conditions</span><span>Privacy Policy</span> </div>
+          </div>
+        </div>
+
       </div>
-
-      <div className="main">
-        <div className='login_head'>Sign Up</div>
-        <div>Wellcome! Please Enter Your Details</div>
-        <div className='error_message'>{errormessage}</div>
-        {userCheck && <div className='error_message'>{userCheck} Username is Allready Exist <b className='try'>Try:{suggestion}</b>  </div>}
-      </div>
-
-      <div>
-        <br />
-        <br />
-        <br />
-        <div className='input-data'>
-          <input name='email' value={email} onChange={(event) => setEmail(event.target.value)} type="text" placeholder="Email Address" />
-        </div>
-
-        <div className='input-data'>
-          <input name='username' value={username} onChange={(event) => setUserName(event.target.value)} type="text" placeholder="User Name" />
-        </div>
-
-        <div className='input-data'>
-          <input onChange={(event) => setPassword(event.target.value)} type="password" placeholder="Password" />
-        </div>
-
-        <br />
-        <br />
-        <br />
-        <div className='input-data'>
-          <button className='login_button' onClick={SaveProfile}>Sign Up</button>
-        </div>
-        <div className="foot">
-          <div>All copyright &copy; reserved Library of Life</div>
-          <div><span className='termscondition'>Terms & Conditions</span><span>Privacy Policy</span> </div>
-        </div>
-      </div>
-
     </div>
   )
 }
