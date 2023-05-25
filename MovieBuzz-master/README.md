@@ -18,16 +18,16 @@ The Movie Database(TMDB) 'www.http://themoviedb.org/apikey'.
 
 Go to 'www.http://themoviedb.org'.
 Signup >> Gmail Verfication >> Login
-Go to Setting >>API keys >> Apply For Api Keys
+Go to Setting >>API keys >> Apply For Api Keys.
 If they ask project link just type 'NA'.
 You will get API keys in API Keys section.
  Copy API keys and paste in TBMB_Keys variable's strings given in 
  Movielist.js,Recommendations.js and SelectedMovie.js
- Done : Your database Is connected your app.
+ Done : Your database Is connected with your app.
 
 # System Requirements
 
-Windows/Mac/Linux
+Windows/Mac/Linux,
 Min 4 gb Ram
 
 # Needed Softwares on system
@@ -40,9 +40,9 @@ Nodejs (https://nodejs.org/Download)
 
 # React Dependencies
 
-Node Modules
-React-Router-Dom
-Material Ui
+Node Modules,
+React-Router-Dom,
+Material Ui,
 Axios
 
 # Functionalities
@@ -56,11 +56,11 @@ Logout
 
 # How to Install Dependencies
 
-npm install
+$ npm install
 
 # How to Start The Project
 
-npm start
+$ npm start
  
 # Hurray!! Enjoy The App #
 
